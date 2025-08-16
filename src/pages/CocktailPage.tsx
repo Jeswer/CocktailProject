@@ -16,8 +16,8 @@ export default function CocktailPage() {
 
   return (
     <main style={{ padding: '1rem' }}>
-      <h1>{cocktail.strDrink}</h1>
-      <img src={cocktail.strDrinkThumb} alt={cocktail.strDrink} style={{ width: '300px' }} />
+      <h1>{cocktail.drinkTitle}</h1>
+      <img src={cocktail.drinkThumb} alt={cocktail.drinkTitle} style={{ width: '300px' }} />
       <h2>Ingredients</h2>
       <ul>
         {Object.keys(cocktail)
@@ -27,7 +27,7 @@ export default function CocktailPage() {
           ))}
       </ul>
       <h2>Instructions</h2>
-      <p>{cocktail.strInstructions}</p>
+      <p>{cocktail.instructions}</p>
     </main>
   )
 }

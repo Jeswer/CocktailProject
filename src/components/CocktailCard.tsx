@@ -8,9 +8,9 @@ type Props = {
 export default function CocktailCard({ cocktail }: Props) {
   return (
     <div style={{ border: '1px solid #ccc', padding: '1rem', borderRadius: '8px' }}>
-      <img src={cocktail.strDrinkThumb} alt={cocktail.strDrink} style={{ width: '100%' }} />
-      <h3>{cocktail.strDrink}</h3>
-      <Link to={`/cocktail/${cocktail.idDrink}`}>View Recipe</Link>
+      <img src={cocktail.drinkThumb} alt={cocktail.drinkTitle} style={{ width: '100%' }} />
+      <h3>{cocktail.drinkTitle}</h3>
+      <Link to={`/cocktail/${cocktail.ID}`}>View Recipe</Link>
     </div>
   )
 }

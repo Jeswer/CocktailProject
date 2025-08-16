@@ -13,7 +13,7 @@ export default function RandomCocktail() {
             const cocktail = data.drinks ? data.drinks[0]: null
             setRandomCocktail(cocktail)
 
-            navigate(`/cocktail/${cocktail.idDrink}`)
+            navigate(`/cocktail/${cocktail.ID}`)
         })
         .catch(err => console.error('Error fetching random cocktail', err))
     }
