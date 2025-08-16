@@ -1,7 +1,7 @@
 export type Cocktail = {
-  ID: string
-  drinkTitle: string
-  drinkThumb: string
-  instructions?: string
+  idDrink: string
+  strDrink: string
+  strDrinkThumb: string
+  strInstructions?: string
   [key: string]: string | undefined
 }

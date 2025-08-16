@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { type Cocktail } from '../types'
 import { useNavigate } from 'react-router-dom'
+import Button from '@mui/material/Button';
 
 export default function RandomCocktail() {
     const [,setRandomCocktail] = useState<Cocktail | null>(null)
@@ -13,17 +14,15 @@ export default function RandomCocktail() {
             const cocktail = data.drinks ? data.drinks[0]: null
             setRandomCocktail(cocktail)
 
-            navigate(`/cocktail/${cocktail.ID}`)
+            navigate(`/cocktail/${cocktail.idDrink}`)
         })
         .catch(err => console.error('Error fetching random cocktail', err))
     }
     
 
   return(
-    <div>
-    <button onClick={getRandomcocktail}>
-    I'm feeling lucky!🧦
-    </button>
-    </div>
+      <Button variant="outlined" onClick={getRandomcocktail}>
+    Random Cocktail 
+    </Button>
   )
 }
